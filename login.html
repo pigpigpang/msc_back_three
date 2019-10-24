@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>登录</title>
+    </head>
+    </script>
+    <body>
+        <h1>请登录</h1>
+        <form action="login.php" method="post" id="loginTable">
+            邮箱:
+            <input
+                type="email"
+                name="email"
+                required="required"
+                id="emailInput"
+            /><br />
+            密码:
+            <input
+                type="password"
+                name="password"
+                required="required"
+                id="passwordInput"
+            /><br />
+            <button type="submit">登录！</button>
+            <button onclick="alert('请与网站管理员联系')">
+                忘记密码？
+            </button>
+        </form>
+        <br />
+        <a href="Register.html">
+            没有账号？立即注册！
+        </a>
+    </body>
+</html>

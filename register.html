@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>注册</title>
+    </head>
+
+    <script>
+        function checkPassword() {
+            var password1 = document.getElementById("pwd").value;
+            var password2 = document.getElementById("twicePwd").value;
+            if (password1 === password2) return true;
+            else {
+                alert("两次输入的密码不一致");
+                return false;
+            }
+        }
+    </script>
+
+    <body>
+        <h1>注册！</h1>
+        <table>
+            <form
+                name="register"
+                action="register.php"
+                method="post"
+                onsubmit="return checkPassword()"
+            >
+                <tr>
+                    <td>
+                        <label>姓名</label>
+                    </td>
+                    <td>
+                        <input
+                            type="text"
+                            placeholder="请填写真实姓名"
+                            name="name"
+                            required="required"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>QQ</label>
+                    </td>
+                    <td>
+                        <input
+                            type="text"
+                            name="qq"
+                            placeholder="QQ长度最大支持11位"
+                            required="required"
+                            maxlength="11"
+                        />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>邮箱</label>
+                    </td>
+                    <td>
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="请注意邮箱格式"
+                            required="required"
+                        />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>密码</label>
+                    </td>
+                    <td>
+                        <input
+                            type="password"
+                            id="pwd"
+                            name="password"
+                            placeholder="请输入密码"
+                            maxlength="50"
+                            required="required"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>再次输入密码</label>
+                    </td>
+                    <td>
+                        <input
+                            type="password"
+                            id="twicePwd"
+                            placeholder="请再次输入密码"
+                            maxlength="50"
+                            required="required"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <button type="submit">注册！</button>
+                    </td>
+                    <td>
+                        <a href="Login.html">已有账号？立即登录！</a>
+                    </td>
+                </tr>
+            </form>
+        </table>
+    </body>
+</html>
